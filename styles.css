@@ -109,4 +109,5 @@ input[type=number]::-webkit-outer-spin-button {
     font-size: .7rem;
     font-family: 'Roboto', sans-serif;
     margin-top: 3vh;
+    color: white;
 }
