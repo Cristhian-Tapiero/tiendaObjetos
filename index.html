@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artes y cosas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="parte-superior">
+            <h1 class="title">Sistema de Facturacion Artes y Cosas</h1>
+            <nav class="menu-superior">
+                <ul class="contenedor-lista" id="menu-nav-bar">
+                    <li class="objeto-lista" id="link-client">Registrar Cliente</li>
+                    <li class="objeto-lista" id="link-product">Registrar Producto</li>
+                    <li class="objeto-lista" id="link-factu">Facturar</li>
+                    <li class="objeto-lista" id="link-edit">Editar Datos</li>
+                    <li class="objeto-lista" id="link-delete">Borrar Datos</li>
+                </ul>
+            </nav>
+        </div>
+        <div class="container-area invisible" id="client-form-area">
+            <h2 class="sub-title">Registro de Clientes</h2>
+            <form class="form-area" id="client-form">
+                <input type="number" class="input-area" placeholder="Identificacion del cliente" id="id-cliente">
+                <input type="text" class="input-area" placeholder="Nombre del cliente" id="nom-cliente">
+                <input type="number" class="input-area" placeholder="Telefono del cliente" id="tel-cliente">
+                <input type="text" class="input-area" placeholder="Correo del cliente" id="correo-cliente">
+                <button class="submit-button">Registrar</button>
+            </form>
+        </div>
+        <div class="container-area invisible" id="product-form-area">
+            <h2 class="sub-title">Registro de Producto</h2>
+            <form class="form-area" id="product-form">
+                <input type="number" class="input-area" placeholder="Codigo del producto" id="id-product">
+                <input type="text" class="input-area" placeholder="Nombre del producto" id="nom-product">
+                <input type="number" class="input-area" placeholder="Precio del producto" id="price-product">
+                <input type="number" class="input-area" placeholder="Cantidad del producto" id="cant-product">
+                <button class="submit-button">Registrar</button>
+            </form>
+        </div>
+        <div class="container-area invisible" id="factu-form-area">
+            <h2 class="sub-title">Facturacion</h2>
+            <form class="form-area" id="factu-form">
+                <input type="number" class="input-area" placeholder="Codigo del cliente" id="id-client-factu">
+                <input type="number" class="input-area" placeholder="Codigo del producto" id="id-product-factu">
+                <input type="number" class="input-area" placeholder="Cantidad comprada" id="cant-product-factu">
+                <button class="submit-button">Facturar</button>
+            </form>
+        </div>
+        <div class="container-area invisible" id="query-form-area">
+            <form class="area-consulta" id="query-form">
+                <input type="text" class="input-area" id="query-id" placeholder="ID">
+                <select id="option-select" class="option-selection">
+                    <option value="producto">Producto</option>
+                    <option value="cliente">Cliente</option>
+                </select>
+            </form>
+            <form class="form-area" id="edit-form"></form>
+        </div>
+        <div class="container-area invisible" id="delete-form-area">
+            <form class="area-delete" id="delete-form">
+                <input type="text" class="input-area" id="seek-and-destroy" placeholder="Ingresa el ID a buscar">
+                <select id="option-select-delete" class="option-selection">
+                    <option value="producto">Producto</option>
+                    <option value="cliente">Cliente</option>
+                </select>
+                <div id="delete-nombre" class="texto"></div>
+            </form>
+            <button class="submit-button" id="button-confirm-delete" disabled>Borrar</button>
+        </div>
+    </div>
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>
